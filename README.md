@@ -13,7 +13,36 @@ Aplicação de gerenciamento de tarefas (To-do List) desenvolvida utilizando **D
 
 ---
 
+# 🖥️ Tecnologias Utilizadas
+Python
+
+Django
+
+HTML
+
+CSS (pode ser integrado com frameworks como Bootstrap)
+
+SQLite (banco de dados padrão do Django)
+
+---
+
+# 📂 Estrutura do Projet
+
+todoapp/ — projeto principal em Django
+
+todolist/ — aplicação responsável pelo gerenciamento de tarefas
+
+Templates/ — páginas HTML com integração do Bootstrap
+
+---
+
 # 🚀 Como executar o projeto
+
+Pré-requisitos
+
+Python 3.8 ou superior
+
+pip (gerenciador de pacotes do Python)
 
 Clone este repositório:
 
@@ -26,9 +55,9 @@ py -m venv venv
 
 venv\Scripts\activate (Para Windows)
 
-## ou
-
 source venv/bin/activate  Para (Linux/Mac)
+
+---
 
 # Instale as dependências:
 
@@ -40,6 +69,8 @@ Acesse a pasta do projeto:
 
 cd nome_da_pasta
 
+---
+
 # Inicie o servidor de desenvolvimento:
 
 py manage.py runserver
@@ -47,13 +78,7 @@ py manage.py runserver
 No navegador, acesse:
 http://127.0.0.1:8000/
 
-# 📂 Estrutura do Projet
-
-todoapp/ — projeto principal em Django
-
-todolist/ — aplicação responsável pelo gerenciamento de tarefas
-
-Templates/ — páginas HTML com integração do Bootstrap
+---
 
 # 🎨 Diferenciais Visuais
 
@@ -62,6 +87,8 @@ Barra de navegação e rodapé personalizados
 Tabela de tarefas estilizada com Bootstrap
 
 Layout responsivo, adaptável para diferentes tamanhos de tela
+
+---
 
 # 👤 Desenvolvedor
 Guilherme Basilio
