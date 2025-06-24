@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Tarefas</h1>
+
+{% if todos %}
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Título</th>
+            <th>Concluído</th>
+            <th>Criada em</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+             {% for todo in todos %}
+    <tr {% if todo.isCompleted %}class="task-completed"{% endif %}>
+        <td>{{ todo.id }}</td>
+        <td>{% if todo.isCompleted %}<del>{{ todo.title }}</del>{% else %}{{ todo.title }}{% endif %}</td>
+        <td>{% if todo.isCompleted %}concluida{% else %}pendente{% endif %}</td>
+        <td>{{ todo.created_at|date:"d/m/Y H:i" }}</td>
+        <td>
+        
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="task_id" value="{{ todo.id }}">
+                    <button type="submit" name="complete_task" class="btn btn-sm btn-outline-success">feito</button>
+                </form>
+
+                
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="task_id" value="{{ todo.id }}">
+                    <input type="text" name="new_title" value="{{ todo.title }}" style="width: 120px;">
+                    <button type="submit" name="update_task" class="btn btn-sm btn-outline-primary">editar</button>
+                </form>
+
+                
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="task_id" value="{{ todo.id }}">
+                    <button type="submit" name="delete_task" class="btn btn-sm btn-outline-dark">deletar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Nenhuma tarefa cadastrada.</p>
+{% endif %}
+
+{% endblock %}
