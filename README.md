@@ -49,11 +49,11 @@ http://127.0.0.1:8000/
 
 # 📂 Estrutura do Projet
 
-todoApp/ — projeto principal em Django
+todoapp/ — projeto principal em Django
 
-todo_list/ — aplicação responsável pelo gerenciamento de tarefas
+todolist/ — aplicação responsável pelo gerenciamento de tarefas
 
-templates/ — páginas HTML com integração do Bootstrap
+Templates/ — páginas HTML com integração do Bootstrap
 
 # 🎨 Diferenciais Visuais
 
